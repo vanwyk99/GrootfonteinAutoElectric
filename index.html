@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>Grootfontein Auto Electric | Automotive Electrical Specialists</title>
+<meta name="description" content="Grootfontein Auto Electric in Grootfontein, Namibia. Key cutting and programming, auto electrical repairs, diagnostics, ECU repairs, TCU, Spitronics, number plates and hydraulic cables.">
+<style>
+:root{
+  --black:#050505;--ink:#0a0a0a;--panel:#111;--panel2:#171717;
+  --red:#d71920;--red2:#ff2a31;--gold:#e8a51a;--white:#f7f7f7;--muted:#a8a8a8;
+  --line:rgba(255,255,255,.10);--max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),92%);margin:auto}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:rgba(5,5,5,.88);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{height:60px;width:auto;object-fit:contain}
+nav{display:flex;align-items:center;gap:26px}
+nav a{font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:#eee;transition:.2s}
+nav a:hover{color:var(--gold)}
+.menu{display:none;background:#111;border:1px solid #444;color:#fff;padding:9px 12px;border-radius:5px;font-weight:800}
+
+/* Atmospheric smoke */
+.smoke,.smoke:before,.smoke:after{position:absolute;content:"";pointer-events:none}
+.smoke{width:700px;height:360px;right:-140px;top:120px;filter:blur(32px);opacity:.20;background:radial-gradient(ellipse at 35% 50%,rgba(255,255,255,.30),transparent 60%);transform:rotate(-14deg)}
+.smoke:before{width:430px;height:250px;left:-210px;top:110px;background:radial-gradient(ellipse,rgba(255,255,255,.20),transparent 68%);transform:rotate(25deg)}
+.smoke:after{width:520px;height:250px;right:-160px;bottom:-60px;background:radial-gradient(ellipse,rgba(215,25,32,.22),transparent 68%);transform:rotate(-18deg)}
+
+/* Hero */
+.hero{min-height:calc(100vh - 82px);position:relative;display:flex;align-items:center;overflow:hidden;background:
+ radial-gradient(circle at 80% 30%,rgba(215,25,32,.24),transparent 25%),
+ radial-gradient(circle at 15% 85%,rgba(232,165,26,.10),transparent 30%),
+ linear-gradient(120deg,#030303 0%,#101010 58%,#080808 100%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),transparent)}
+.hero:after{content:"";position:absolute;left:-5%;right:-5%;bottom:-16%;height:42%;background:linear-gradient(90deg,transparent,rgba(215,25,32,.09),transparent);transform:skewY(-7deg)}
+.hero-content{position:relative;z-index:3;padding:105px 0 120px;max-width:800px}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.20em;margin-bottom:18px}
+.kicker:before{content:"";width:34px;height:2px;background:var(--red)}
+h1{font-size:clamp(3rem,7.5vw,6.7rem);line-height:.90;text-transform:uppercase;letter-spacing:-.055em;margin-bottom:28px}
+h1 span{color:var(--red);text-shadow:0 0 35px rgba(215,25,32,.22)}
+.hero p{max-width:720px;color:#d0d0d0;font-size:1.08rem;margin-bottom:34px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;min-height:48px;border-radius:4px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;font-size:.78rem;transition:.2s}
+.btn-red{background:var(--red);box-shadow:0 10px 30px rgba(215,25,32,.24)}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px)}
+.btn-outline{border:1px solid #555;background:rgba(15,15,15,.72)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-badge{position:absolute;right:5%;bottom:60px;z-index:3;width:190px;padding:18px;background:rgba(8,8,8,.78);border:1px solid var(--line);border-left:3px solid var(--gold);backdrop-filter:blur(12px)}
+.hero-badge strong{display:block;font-size:2rem;line-height:1;color:var(--gold)}
+.hero-badge span{display:block;color:#bbb;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;margin-top:7px}
+
+/* General */
+section{padding:95px 0;position:relative}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+.section-title{font-size:clamp(2rem,4.5vw,3.7rem);line-height:1;text-transform:uppercase;letter-spacing:-.035em}
+.section-title span{color:var(--red)}
+.lead{color:var(--muted);max-width:730px}
+.eyebrow{color:var(--gold);font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.18em;margin-bottom:10px}
+
+/* Intro strip */
+.strip{background:#0d0d0d;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.strip-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.strip-item{display:flex;align-items:center;gap:14px;padding:8px 18px;border-right:1px solid var(--line)}
+.strip-item:last-child{border-right:0}
+.strip-icon{width:38px;height:38px;border:1px solid #555;display:grid;place-items:center;color:var(--gold);font-weight:900}
+.strip-item strong{display:block;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em}
+.strip-item small{display:block;color:#8e8e8e;margin-top:2px}
+
+/* Services */
+.services{background:linear-gradient(180deg,#090909,#101010)}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.service{position:relative;overflow:hidden;min-height:210px;padding:27px;background:linear-gradient(145deg,#191919,#0e0e0e);border:1px solid var(--line);transition:.25s}
+.service:before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,var(--red),var(--gold));transform:scaleX(.25);transform-origin:left;transition:.25s}
+.service:hover{transform:translateY(-5px);border-color:#444}
+.service:hover:before{transform:scaleX(1)}
+.service-num{font-size:.68rem;font-weight:900;color:#666;letter-spacing:.15em}
+.service-icon{font-size:1.8rem;margin:18px 0 13px;color:var(--gold)}
+.service h3{text-transform:uppercase;font-size:1rem;line-height:1.2;margin-bottom:8px}
+.service p{color:#999;font-size:.88rem}
+
+/* Feature / key section */
+.feature{background:#070707;overflow:hidden}
+.feature:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 50%,rgba(215,25,32,.15),transparent 35%)}
+.feature-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.feature-copy{padding:15px 0}
+.feature-copy h2{font-size:clamp(2.4rem,5vw,5rem);line-height:.94;text-transform:uppercase;letter-spacing:-.045em;margin-bottom:20px}
+.feature-copy h2 span{color:var(--red)}
+.feature-copy p{color:#bcbcbc;max-width:600px;margin-bottom:25px}
+.key-callout{margin-top:25px;padding:19px 20px;border:1px solid #343434;border-left:3px solid var(--gold);background:rgba(20,20,20,.72)}
+.key-callout strong{display:block;text-transform:uppercase;color:var(--gold);font-size:.9rem;margin-bottom:4px}
+.key-callout span{color:#aaa;font-size:.9rem}
+.feature-image{position:relative;min-height:510px}
+.feature-image img{width:100%;height:510px;object-fit:cover;border:1px solid #333;filter:saturate(.9) contrast(1.05)}
+.feature-image:after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(215,25,32,.35);z-index:-1}
+
+/* About */
+.about{background:#0d0d0d}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
+.about-image{position:relative}
+.about-image img{height:470px;width:100%;object-fit:cover;object-position:center;border:1px solid #333}
+.about-image:before{content:"";position:absolute;left:-10px;bottom:-10px;width:80px;height:80px;border-left:3px solid var(--red);border-bottom:3px solid var(--red)}
+.about-image:after{content:"";position:absolute;right:-10px;top:-10px;width:80px;height:80px;border-right:3px solid var(--gold);border-top:3px solid var(--gold)}
+.about-copy p{color:#aaa;margin:0 0 18px;max-width:680px}
+.quote{margin-top:26px;padding:23px 25px;background:#151515;border-left:3px solid var(--red)}
+.quote strong{display:block;font-size:1.35rem;text-transform:uppercase;letter-spacing:-.02em}
+.quote em{display:block;color:#999;font-style:normal;margin-top:7px;font-size:.94rem}
+
+/* Gallery */
+.gallery{background:#080808}
+.gallery-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-template-rows:240px 240px;gap:12px}
+.gallery-card{position:relative;overflow:hidden;border:1px solid #292929;background:#111}
+.gallery-card img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gallery-card:hover img{transform:scale(1.05)}
+.gallery-card:first-child{grid-row:span 2}
+.gallery-card .caption{position:absolute;left:0;right:0;bottom:0;padding:35px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.88));font-weight:900;text-transform:uppercase;font-size:.76rem;letter-spacing:.08em}
+
+/* Contact */
+.contact{background:linear-gradient(135deg,#111,#060606);overflow:hidden}
+.contact .smoke{left:-220px;right:auto;top:20%;opacity:.12}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-panel{background:#151515;border:1px solid #303030;padding:30px}
+.contact-row{padding:17px 0;border-bottom:1px solid #2a2a2a}
+.contact-row:last-child{border-bottom:0}
+.contact-row small{display:block;color:#777;text-transform:uppercase;font-size:.68rem;letter-spacing:.14em;margin-bottom:3px}
+.contact-row strong,.contact-row a{font-size:1.05rem;font-weight:900}
+.contact-row a:hover{color:var(--gold)}
+.hours{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px;margin-bottom:18px;background:#171717;border:1px solid #303030;border-left:3px solid var(--gold)}
+.hours strong{color:var(--gold);text-transform:uppercase;font-size:.82rem;letter-spacing:.08em}
+.hours span{font-weight:900}
+.map-card{min-height:100%;display:flex;flex-direction:column;justify-content:center;padding:35px;background:radial-gradient(circle at 70% 30%,rgba(215,25,32,.18),transparent 35%),#0d0d0d;border:1px solid #303030;position:relative;overflow:hidden}
+.map-card:after{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(232,165,26,.2);border-radius:50%;right:-80px;top:-80px;box-shadow:0 0 0 35px rgba(232,165,26,.04),0 0 0 70px rgba(232,165,26,.02)}
+.map-card>*{position:relative;z-index:2}
+.pin{font-size:2.4rem;margin-bottom:10px}
+.map-card h3{text-transform:uppercase;font-size:1.4rem;margin-bottom:7px}
+.map-card p{color:#999;max-width:380px;margin-bottom:22px}
+
+footer{border-top:1px solid #292929;padding:28px 0;color:#777;font-size:.82rem;background:#050505}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-inner strong{color:#bbb}
+
+@media(max-width:950px){
+ .service-grid{grid-template-columns:repeat(2,1fr)}
+ .feature-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .feature-image{min-height:420px}.feature-image img{height:420px}
+ .about-image img{height:420px}
+ .hero-badge{display:none}
+}
+@media(max-width:760px){
+ nav{display:none;position:absolute;top:82px;left:0;right:0;background:#080808;border-bottom:1px solid #333;padding:18px 4%;flex-direction:column;align-items:flex-start;gap:17px}
+ nav.open{display:flex}.menu{display:block}.logo{height:51px}
+ .hero-content{padding:80px 0 90px}.hero{min-height:auto}
+ .strip-inner{grid-template-columns:1fr}.strip-item{border-right:0;border-bottom:1px solid var(--line);padding:12px 0}.strip-item:last-child{border-bottom:0}
+ .service-grid{grid-template-columns:1fr}
+ section{padding:70px 0}.section-head{display:block}.section-head .lead{margin-top:15px}
+ .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 220px}.gallery-card:first-child{grid-row:span 1;grid-column:span 2}
+ .feature-image img{height:380px}.about-image img{height:350px}
+ .hours{align-items:flex-start;flex-direction:column;gap:5px}
+}
+@media(max-width:470px){
+ .gallery-grid{grid-template-columns:1fr;grid-template-rows:260px 220px 220px 220px}.gallery-card:first-child{grid-column:auto}
+ h1{font-size:3.2rem}.feature-copy h2{font-size:2.7rem}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="#home" aria-label="Grootfontein Auto Electric home"><img class="logo" src="assets/gae-logo.png" alt="Grootfontein Auto Electric"></a>
+    <button class="menu" aria-label="Open menu" onclick="document.querySelector('nav').classList.toggle('open')">MENU</button>
+    <nav>
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#keys">Keys</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-grid"></div><div class="smoke"></div>
+  <div class="container hero-content">
+    <div class="kicker">Grootfontein • Namibia</div>
+    <h1>Built for<br><span>the road.</span></h1>
+    <p>Professional automotive electrical services, vehicle key cutting and programming, diagnostics, ECU repairs, TCU, Spitronics, number plates and hydraulic cables.</p>
+    <div class="buttons"><a class="btn btn-red" href="tel:+264813064020">Call 081 306 4020</a><a class="btn btn-outline" href="#services">Explore Services</a></div>
+  </div>
+  <div class="hero-badge"><strong>2008</strong><span>Serving Grootfontein with experience</span></div>
+</section>
+
+<section class="strip">
+  <div class="container strip-inner">
+    <div class="strip-item"><div class="strip-icon">⚡</div><div><strong>Auto Electrical</strong><small>Fault finding & repairs</small></div></div>
+    <div class="strip-item"><div class="strip-icon">🔑</div><div><strong>Keys & Programming</strong><small>Cutting & programming</small></div></div>
+    <div class="strip-item"><div class="strip-icon">◉</div><div><strong>Diagnostics</strong><small>Vehicle electronic systems</small></div></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">What we do</div><h2 class="section-title">Our <span>Services</span></h2></div><p class="lead">From automotive electrical repairs to specialist vehicle electronics and keys, GAE provides practical solutions from its Grootfontein workshop.</p></div>
+    <div class="service-grid">
+      <article class="service"><div class="service-num">01</div><div class="service-icon">🔑</div><h3>Key Cutting</h3><p>Vehicle key cutting for replacement and spare keys.</p></article>
+      <article class="service"><div class="service-num">02</div><div class="service-icon">⚿</div><h3>Key Programming</h3><p>Programming services for vehicle keys, remotes and related systems.</p></article>
+      <article class="service"><div class="service-num">03</div><div class="service-icon">▣</div><h3>Number Plates</h3><p>Number plate services for your vehicle.</p></article>
+      <article class="service"><div class="service-num">04</div><div class="service-icon">⚡</div><h3>Auto Electrical Repairs</h3><p>Wiring repairs, short-circuit detection and electrical fault finding.</p></article>
+      <article class="service"><div class="service-num">05</div><div class="service-icon">ECU</div><h3>ECU Repairs</h3><p>Repair services for electronic control units.</p></article>
+      <article class="service"><div class="service-num">06</div><div class="service-icon">TCU</div><h3>TCU Services</h3><p>Services relating to transmission control electronics.</p></article>
+      <article class="service"><div class="service-num">07</div><div class="service-icon">◈</div><h3>Spitronics</h3><p>Spitronics engine management systems and related services.</p></article>
+      <article class="service"><div class="service-num">08</div><div class="service-icon">⌁</div><h3>Diagnostics & Repairs</h3><p>Vehicle diagnostics, fault finding and electronic repairs.</p></article>
+      <article class="service"><div class="service-num">09</div><div class="service-icon">▱</div><h3>Hydraulic Cables</h3><p>Hydraulic cable services for automotive applications.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="keys">
+  <div class="smoke"></div>
+  <div class="container feature-grid">
+    <div class="feature-copy">
+      <div class="eyebrow">Keys & security</div>
+      <h2>Don't wait<br>for a <span>lost key.</span></h2>
+      <p>Need a spare vehicle key? GAE offers key cutting and programming services. Whether you need a replacement, a spare or programming for a vehicle key system, get in touch with us.</p>
+      <div class="key-callout"><strong>Need a spare key?</strong><span>Call 081 306 4020 to discuss your vehicle and key requirements.</span></div>
+      <div class="buttons" style="margin-top:22px"><a class="btn btn-red" href="tel:+264813064020">Call About Your Key</a></div>
+    </div>
+    <div class="feature-image"><img src="assets/photos/key-cutting-1.jpg" alt="Vehicle key being cut at Grootfontein Auto Electric"></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-image"><img src="assets/photos/willy.jpg" alt="Willy from Grootfontein Auto Electric working with vehicle electronics"></div>
+    <div class="about-copy">
+      <div class="eyebrow">Our story</div>
+      <h2 class="section-title">Experience. <span>Passion.</span> Drive.</h2>
+      <p>Grootfontein Auto Electric was established in 2008. The business was originally started by Willy alongside a business partner. In 2024, Willy took over the business independently, continuing to build Grootfontein Auto Electric around his experience and passion for automotive electrical work.</p>
+      <p>Today, with Antje by his side, the business continues to grow while keeping the same commitment to quality workmanship and personal service.</p>
+      <div class="quote"><strong>Built on experience. Driven by passion.</strong><em>Willy's passion for cars goes beyond the workshop, with a love for rally and oval racing that keeps him close to the heart of motorsport.</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Inside GAE</div><h2 class="section-title">Our <span>Work</span></h2></div><p class="lead">A look at the people, equipment and work behind Grootfontein Auto Electric.</p></div>
+    <div class="gallery-grid">
+      <div class="gallery-card"><img src="assets/photos/entrance.jpg" alt="Grootfontein Auto Electric entrance sign"><div class="caption">Find us in Grootfontein</div></div>
+      <div class="gallery-card"><img src="assets/photos/key-cutting-2.jpg" alt="Vehicle key cutting equipment"><div class="caption">Key Cutting</div></div>
+      <div class="gallery-card"><img src="assets/photos/spitronics.jpg" alt="Spitronics engine management systems"><div class="caption">Spitronics</div></div>
+      <div class="gallery-card"><img src="assets/photos/willy.jpg" alt="Willy working with automotive equipment"><div class="caption">Hands-on expertise</div></div>
+      <div class="gallery-card"><img src="assets/photos/key-cutting-1.jpg" alt="Vehicle key being cut"><div class="caption">Key Programming & Cutting</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="smoke"></div>
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Visit or contact us</div><h2 class="section-title">Let's Get Your <span>Vehicle Sorted.</span></h2></div><p class="lead">Have a key problem, electrical fault or vehicle electronics issue? Get in touch with Grootfontein Auto Electric.</p></div>
+    <div class="contact-grid">
+      <div class="contact-panel">
+        <div class="contact-row"><small>Address</small><strong>270 Maroela Street, Grootfontein, Namibia</strong></div>
+        <div class="contact-row"><small>Phone</small><a href="tel:+264813064020">081 306 4020</a></div>
+        <div class="contact-row"><small>Email</small><a href="mailto:gaetspa01@gmail.com">gaetspa01@gmail.com</a></div>
+        <div class="contact-row"><small>Operating Hours</small><strong>7:30 AM – 5:00 PM</strong></div>
+        <div class="buttons" style="margin-top:24px"><a class="btn btn-red" href="tel:+264813064020">Call GAE</a><a class="btn btn-outline" href="mailto:gaetspa01@gmail.com">Email Us</a></div>
+      </div>
+      <div class="map-card">
+        <div class="pin">⌖</div><h3>270 Maroela Street</h3><p>Grootfontein, Namibia</p>
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=270+Maroela+Street%2C+Grootfontein%2C+Namibia" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container footer-inner"><div>© 2026 <strong>Grootfontein Auto Electric</strong>. All rights reserved.</div><div>270 Maroela Street • 081 306 4020</div></div></footer>
+<script>
+const nav=document.querySelector('nav');
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+</script>
+</body>
+</html>
