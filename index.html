@@ -214,21 +214,23 @@ footer{border-top:1px solid #292929;padding:28px 0;color:#777;font-size:.82rem;b
         
        <div style="position:relative;max-width:430px;margin:0 auto;padding:35px 20px;">
 
-  <!-- Smoky graphite halo behind logo -->
-  <div style="position:absolute;inset:0;
-    background:
-    radial-gradient(ellipse at center,rgba(145,145,145,.42) 0%,rgba(95,95,95,.28) 28%,rgba(55,55,55,.16) 48%,transparent 72%);
-    filter:blur(18px);
-    transform:scale(1.15);
-    z-index:0;">
-  </div>
+  <!-- Stronger visible automotive smoke -->
+<div style="position:absolute;inset:-20px;
+  background:
+  radial-gradient(ellipse at 35% 45%,rgba(210,210,210,.48) 0%,rgba(150,150,150,.32) 18%,rgba(90,90,90,.20) 38%,transparent 65%),
+  radial-gradient(ellipse at 70% 30%,rgba(190,190,190,.30) 0%,rgba(110,110,110,.18) 30%,transparent 60%),
+  radial-gradient(ellipse at 55% 75%,rgba(160,160,160,.28) 0%,rgba(80,80,80,.15) 32%,transparent 62%);
+  filter:blur(14px);
+  transform:scale(1.18);
+  z-index:0;">
+</div>
 
-  <!-- Subtle red automotive glow -->
-  <div style="position:absolute;left:8%;top:35%;width:85%;height:25%;
-    background:radial-gradient(ellipse,rgba(196,0,50,.16),transparent 70%);
-    filter:blur(22px);
-    z-index:0;">
-  </div>
+  <!-- Red automotive glow through the smoke -->
+<div style="position:absolute;left:5%;top:30%;width:90%;height:35%;
+  background:radial-gradient(ellipse,rgba(196,0,50,.22),rgba(196,0,50,.08) 35%,transparent 72%);
+  filter:blur(25px);
+  z-index:0;">
+</div>
 
   <!-- Original GAE logo -->
   <img src="assets/photos/gae-logo.png"
