@@ -212,8 +212,30 @@ footer{border-top:1px solid #292929;padding:28px 0;color:#777;font-size:.82rem;b
         
         <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle,rgba(255,174,0,.16),transparent 70%);"></div>
         
-        <div style="background:linear-gradient(145deg,#eeeeee,#cfcfcf);border:1px solid rgba(216,164,0,.65);border-radius:8px;padding:22px 25px;box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 12px 30px rgba(0,0,0,.55);max-width:430px;margin:0 auto;">
-  <img src="assets/photos/gae-logo.png" alt="Grootfontein Auto Electric" style="display:block;width:100%;height:auto;filter:drop-shadow(0 4px 5px rgba(0,0,0,.35));">
+       <div style="position:relative;max-width:430px;margin:0 auto;padding:35px 20px;">
+
+  <!-- Smoky graphite halo behind logo -->
+  <div style="position:absolute;inset:0;
+    background:
+    radial-gradient(ellipse at center,rgba(145,145,145,.42) 0%,rgba(95,95,95,.28) 28%,rgba(55,55,55,.16) 48%,transparent 72%);
+    filter:blur(18px);
+    transform:scale(1.15);
+    z-index:0;">
+  </div>
+
+  <!-- Subtle red automotive glow -->
+  <div style="position:absolute;left:8%;top:35%;width:85%;height:25%;
+    background:radial-gradient(ellipse,rgba(196,0,50,.16),transparent 70%);
+    filter:blur(22px);
+    z-index:0;">
+  </div>
+
+  <!-- Original GAE logo -->
+  <img src="assets/photos/gae-logo.png"
+    alt="Grootfontein Auto Electric"
+    style="position:relative;z-index:2;display:block;width:100%;height:auto;
+    filter:drop-shadow(0 5px 8px rgba(0,0,0,.8));">
+
 </div>
         
         <div style="margin-top:25px;text-align:center;font-size:12px;letter-spacing:4px;color:#d8a400;font-weight:700;">
