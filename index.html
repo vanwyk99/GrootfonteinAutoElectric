@@ -355,7 +355,17 @@ footer{border-top:1px solid #292929;padding:28px 0;color:#777;font-size:.82rem;b
       border:1px solid rgba(196,0,50,.25);
       pointer-events:none;
     }
-
+.gae-logo-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 35%, rgba(210,210,210,.30), transparent 45%),
+    radial-gradient(ellipse at 75% 65%, rgba(170,170,170,.24), transparent 48%),
+    radial-gradient(ellipse at 50% 50%, rgba(230,230,230,.12), transparent 60%);
+  filter: blur(18px);
+  pointer-events: none;
+}
     .gae-logo{
       position:relative;
       z-index:2;
